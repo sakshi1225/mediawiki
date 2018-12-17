@@ -15,6 +15,7 @@ Vagrant.configure("2") do |config|
   config.vm.box = "debian/stretch64"
   config.vm.provision :shell, path: "bootstrap_debian.sh"
   config.vm.provision :shell, path: "bootstrap.sh"
+  config.vm.provision :docker_compose, yml: "stack.yml", rebuild: true, run: "always"
   config.vm.define "mediawiki"
   config.vm.hostname="mediawiki"
 
