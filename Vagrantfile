@@ -59,7 +59,7 @@ Vagrant.configure("2") do |config|
   #   vb.memory = "1024"
   # end
   config.vm.provider "libvirt" do |vb|
-      vb.memory = "2048"
+      vb.memory = "512"
   end
 
   # View the documentation for the provider you are using for more
