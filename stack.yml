@@ -5,9 +5,9 @@
 version: '3'
 services:
   mediawiki:
-    image: mediawiki
+    image: wikimedia/mediawiki
     restart: always
-    depends_on :
+    links:
       - database
     ports:
       - 8080:80
@@ -18,7 +18,7 @@ services:
       # uncomment after wiki setup
       #- /srv/wiki/LocalSettings.php:/var/www/html/LocalSettings.php 
   database:
-    image: mariadb
+    image: mysql
     restart: always
     ports:
       - 3306:3306  
