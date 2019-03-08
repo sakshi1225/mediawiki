@@ -11,8 +11,6 @@ services:
       - database
     ports:
       - 8080:80
-    links:
-      - database
     volumes:
       - /srv/wiki/images:/var/www/html/images
       # uncomment after wiki setup
