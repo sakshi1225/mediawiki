@@ -9,7 +9,7 @@ services:
     restart: always
     environment:
       - MEDIAWIKI_DB_TYPE=mysql
-      - MEDIAWIKI_DB_HOST=db
+      - MEDIAWIKI_DB_HOST=database
       - MEDIAWIKI_DB_USER='wiki'
       - MEDIAWIKI_DB_PASSWORD='password'
       - MEDIAWIKI_SITE_SERVER=http://localhost:8080
